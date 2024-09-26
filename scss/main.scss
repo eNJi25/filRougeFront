@@ -1,2 +1,6 @@
 @import 'custom';
 @import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");
+
+p {
+    font-family: $font-family-serif;
+}
