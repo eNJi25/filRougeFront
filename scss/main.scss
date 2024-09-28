@@ -1,6 +1,43 @@
-@import 'custom';
+@import "custom";
 @import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
 p {
-    font-family: $font-family-serif;
+  font-family: $font-family-serif;
+}
+
+.hero-scene {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/FondHeroScene.jpg);
+    background-size: cover;
+    filter: brightness(0.3);
+  }
+
+  * {
+    //Positionner les éléments devant le ::before
+    position: relative;
+  }
+
+  .hero-scene-content {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.text-justify {
+  text-align: justify;
 }
