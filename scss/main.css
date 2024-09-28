@@ -11972,6 +11972,7 @@ p {
 
 .hero-scene {
   position: relative;
+  margin-bottom: 15px;
 }
 .hero-scene::before {
   content: "";
@@ -12018,4 +12019,8 @@ p {
 }
 .image-card:hover img {
   filter: brightness(0.3);
+}
+
+.form-label {
+  color: #906427;
 }/*# sourceMappingURL=main.css.map */
