@@ -11966,11 +11966,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-* {
-  box-sizing: border-box;
-  margin: 0;
-}
-
 p {
   font-family: "Hind Madurai", serif;
 }
@@ -11993,7 +11988,7 @@ p {
   position: relative;
 }
 .hero-scene .hero-scene-content {
-  height: 300px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12002,4 +11997,25 @@ p {
 
 .text-justify {
   text-align: justify;
+}
+
+.image-card {
+  position: relative;
+}
+.image-card img {
+  transition: all 0.3s;
+}
+.image-card .titre-image {
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+}
+.image-card:hover .titre-image {
+  opacity: 1;
+}
+.image-card:hover img {
+  filter: brightness(0.3);
 }/*# sourceMappingURL=main.css.map */
