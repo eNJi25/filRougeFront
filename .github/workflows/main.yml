@@ -11,7 +11,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: sftp-testquaiantique.alwaysdata.net
+        server: ftp-testquaiantique.alwaysdata.net
         username: testquaiantique
         password: ${{ secrets.ftp_password }}
         protocol: ftps
