@@ -5,17 +5,18 @@
 </div>
 
 <div class="container">
-    <form>
-        <div class="mb-3">
+    <form id="signinForm">
+        <div class="mb-3 mt-3">
             <label for="EmailInput" class="form-label">Email : </label>
-            <input type="email" class="form-control" id="EmailInput">
+            <input type="email" class="form-control" id="EmailInput" name="email">
+            <div class="invalid-feedback">Le compte utilisateur et le mot de passe ne correspondent pas</div>
         </div>
         <div class="mb-3">
             <label for="PasswordInput" class="form-label">Mot de passe : </label>
-            <input type="password" class="form-control" id="PasswordInput">
+            <input type="password" class="form-control" id="PasswordInput" name="mdp">
         </div>
         <div class="text-center">
-            <button type="submit" class="btn btn-primary mb-3">Se connecter</button>
+            <button type="button" class="btn btn-primary mb-3" id="btnSignin">Se connecter</button>
         </div>
     </form>
     <div class="mb-3 text-center">
