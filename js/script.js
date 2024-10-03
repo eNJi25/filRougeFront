@@ -85,3 +85,44 @@ function isConnected() {
 function getRole() {
   return getCookie(roleCookieName);
 }
+
+function getInfosUser() {
+  let myHeaders = new Headers();
+  myHeaders.append("X-AUTH-TOKEN", getToken());
+
+  let requestOptions = {
+    method: "GET",
+    headers: myHeaders,
+    redirect: "follow",
+  };
+
+  fetch(apiUrl + "account/me", requestOptions)
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        console.log("Impossible de récupérer les informations utilisateur");
+      }
+    })
+    .then((result) => {
+      return result;
+    })
+    .catch((error) => {
+      console.error(
+        "erreur lors de la récupération des données utilisateur",
+        error
+      );
+    });
+}
+
+function sanitizeHtml(text) {
+  // Créez un élément HTML temporaire de type "div"
+  const tempHtml = document.createElement("div");
+
+  // Affectez le texte reçu en tant que contenu texte de l'élément "tempHtml"
+  tempHtml.textContent = text;
+
+  // Utilisez .innerHTML pour récupérer le contenu de "tempHtml"
+  // Cela va "neutraliser" ou "échapper" tout code HTML potentiellement malveillant
+  return tempHtml.innerHTML;
+}
